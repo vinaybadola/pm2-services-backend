@@ -7,7 +7,7 @@ import AuthController from '../controllers/auth-controller.js';
 const authController = new AuthController();
 
 router.post('/login', authController.login);
-router.post('/signup', authController.signup);
+router.post('/signup', customAuth,authController.signup);
 router.get('/logout', customAuth, authController.logout);
 router.post("/delete", customAuth, authController.deleteAccount);
 

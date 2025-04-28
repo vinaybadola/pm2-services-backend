@@ -24,7 +24,6 @@ pm2.connect((err) => {
 // Routes
 import dashboardRoutes from './src/routes/dashboard-route.js';
 import authRoutes from './src/routes/auth-route.js';
-import customAuth from './src/middleware/auth-middleware.js';
 
 app.get('/api/config', (req, res) => {
     res.json({ apiBaseUrl: process.env.WHATSAPP_API });

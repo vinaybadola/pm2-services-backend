@@ -4,7 +4,6 @@ import Admin from '../models/admin-model.js';
 const customAuth = async (req, res, next) => {
   const token = req.cookies?.admincookie;
   try {
-    console.log('token', token);
     if(!token){
       return res.status(401).json({success:false, message : "You are not authorized!"})
     }
